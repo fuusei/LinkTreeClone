@@ -1,0 +1,16 @@
+{
+  "name": "Derek",
+  "avatar": "https://avatars.githubusercontent.com/u/123341787?v=4",
+  "links": [
+    {
+      "title": "LinkedIn",
+      "icon": "public/some/path",
+      "url": "https://www.linkedin.com/in/derek-mackey"
+    },
+    {
+      "title": "Github",
+      "icon": "public/some/path",
+      "url": "https://github.com/dmackey199"
+    }
+  ]
+}
