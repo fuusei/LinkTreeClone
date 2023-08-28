@@ -4,12 +4,12 @@
   "links": [
     {
       "title": "LinkedIn",
-      "icon": "public/some/path",
+      "icon": "/linkedin.svg",
       "url": "https://www.linkedin.com/in/derek-mackey"
     },
     {
       "title": "Github",
-      "icon": "public/some/path",
+      "icon": "/github.svg",
       "url": "https://github.com/dmackey199"
     }
   ]
