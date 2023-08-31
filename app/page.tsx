@@ -15,9 +15,9 @@ function LinkRow({
       href={url}
       target="_blank"
       rel="noopener noreferrer"
-      className="flex p-1 w-full rounded-md hover:scale-105 transition-all bg-gray-100 mb-3 max-w-3xl"
+      className="flex p-1 w-full rounded-md hover:scale-105 transition-all bg-gray-100 mb-4 max-w-3xl"
     >
-      <div className="flex text-center w-full">
+      <div className="flex w-full">
         <div className="w-10 h-10">
           <Image
             className="rounded-sm"

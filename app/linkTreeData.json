@@ -1,5 +1,5 @@
 {
-  "name": "Derek",
+  "name": "Derek 🎐",
   "avatar": "https://avatars.githubusercontent.com/u/123341787?v=4",
   "links": [
     {
@@ -10,7 +10,17 @@
     {
       "title": "Github",
       "icon": "/github.svg",
+      "url": "https://github.com/fuusei"
+    },
+    {
+      "title": "Old Github",
+      "icon": "/github.svg",
       "url": "https://github.com/dmackey199"
+    },
+    {
+      "title": "Personal Website (Coming soon)",
+      "icon": "/website.svg",
+      "url": "https://www.derekmackey.com"
     }
   ]
 }
