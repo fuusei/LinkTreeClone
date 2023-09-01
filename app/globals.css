@@ -19,10 +19,5 @@
 body {
   height: 100vh;
   color: rgb(var(--foreground-rgb));
-  background: radial-gradient(
-    at center top,
-    rgb(17, 24, 39),
-    rgb(88, 28, 135),
-    rgb(124, 58, 237)
-  );
+  background: radial-gradient(at center top, rgb(17, 24, 39), rgb(75, 85, 99));
 }

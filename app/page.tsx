@@ -1,5 +1,8 @@
+"use client";
 import Image from "next/image";
 import linktreeData from "./linktreeData.json";
+import { useState } from "react";
+import { AiOutlineLink } from "react-icons/ai";
 
 function LinkRow({
   title,
@@ -15,7 +18,7 @@ function LinkRow({
       href={url}
       target="_blank"
       rel="noopener noreferrer"
-      className="flex p-1 w-full rounded-md hover:scale-105 transition-all bg-gray-100 mb-4 max-w-3xl"
+      className="flex px-1 py-2 w-full rounded-md hover:scale-105 transition-all bg-gray-100 mb-4 max-w-3xl"
     >
       <div className="flex w-full">
         <div className="w-10 h-10">
@@ -49,20 +52,43 @@ interface Link {
 
 export default function Home() {
   const data: Data = linktreeData;
+  const [copied, setCopied] = useState(false);
+  const copyToClipboard = () => {
+    setCopied(true);
+    navigator.clipboard.writeText("http://localhost:3000/");
+    setTimeout(() => setCopied(false), 3000);
+  };
   return (
-    <div className="flex flex-col items-center">
-      <Image
-        priority
-        className="rounded-full mx-auto mt-10"
-        alt={data.name}
-        src={data.avatar}
-        width={120}
-        height={120}
-      />
-      <h1 className="font-bold my-8 text-xl">{data.name}</h1>
-      {data.links.map((link) => (
-        <LinkRow key={link.url} {...link}></LinkRow>
-      ))}
+    <div className="flex flex-col">
+      <div
+        className={`flex justify-end px-4 py-2 ${
+          copied ? `text-green-500` : `text-white hover:text-pink-500`
+        } `}
+      >
+        <button
+          onClick={copyToClipboard}
+          className="flex flex-row items-center bg-gray-800/75 rounded-md p-2"
+        >
+          {copied ? "Copied!" : "Copy Link"}
+          <div className="pl-1">
+            <AiOutlineLink />
+          </div>
+        </button>
+      </div>
+      <div className="flex flex-col items-center">
+        <Image
+          priority
+          className="rounded-full mx-auto mt-10"
+          alt={data.name}
+          src={data.avatar}
+          width={120}
+          height={120}
+        />
+        <h1 className="font-bold my-8 text-xl">{data.name}</h1>
+        {data.links.map((link) => (
+          <LinkRow key={link.url} {...link}></LinkRow>
+        ))}
+      </div>
     </div>
   );
 }
