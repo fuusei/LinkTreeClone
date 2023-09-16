@@ -1,7 +1,24 @@
-{
+export interface Link {
+  title: string;
+  icon: string;
+  url: string;
+}
+
+export interface LinkTree {
+  name: string;
+  avatar: string;
+  links: Link[];
+}
+
+export const linkTreeData: LinkTree = {
   "name": "Derek 🎐",
   "avatar": "/me.jfif",
   "links": [
+      {
+      "title": "Personal Website",
+      "icon": "/website.svg",
+      "url": "https://devbyderek.com"
+    },
     {
       "title": "LinkedIn",
       "icon": "/linkedin.svg",
@@ -16,11 +33,6 @@
       "title": "Old Github",
       "icon": "/github.svg",
       "url": "https://github.com/dmackey199"
-    },
-    {
-      "title": "Personal Website (Coming soon)",
-      "icon": "/website.svg",
-      "url": "https://www.derekmackey.com"
     }
   ]
 }

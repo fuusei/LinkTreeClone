@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import linktreeData from "./linktreeData.json";
+import { linkTreeData } from "./linkTreeData";
 import { useState } from "react";
 import { AiOutlineLink } from "react-icons/ai";
 
@@ -51,7 +51,6 @@ interface Link {
 }
 
 export default function Home() {
-  const data: Data = linktreeData;
   const [copied, setCopied] = useState(false);
   const copyToClipboard = () => {
     setCopied(true);
@@ -79,13 +78,13 @@ export default function Home() {
         <Image
           priority
           className="rounded-full mx-auto mt-10"
-          alt={data.name}
-          src={data.avatar}
+          alt={linkTreeData.name}
+          src={linkTreeData.avatar}
           width={120}
           height={120}
         />
-        <h1 className="font-bold my-8 text-xl">{data.name}</h1>
-        {data.links.map((link) => (
+        <h1 className="font-bold my-8 text-xl">{linkTreeData.name}</h1>
+        {linkTreeData.links.map((link) => (
           <LinkRow key={link.url} {...link}></LinkRow>
         ))}
       </div>
