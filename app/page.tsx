@@ -54,7 +54,7 @@ export default function Home() {
   const [copied, setCopied] = useState(false);
   const copyToClipboard = () => {
     setCopied(true);
-    navigator.clipboard.writeText("http://localhost:3000/");
+    navigator.clipboard.writeText("https://linktreeclone-silk.vercel.app/");
     setTimeout(() => setCopied(false), 3000);
   };
   return (
